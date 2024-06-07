@@ -153,6 +153,7 @@ export default function PersistentDrawerLeft() {
   }, []);
 
   useEffect(() => {
+    console.log("user",user)
     if (user) {
       console.log("user adding ....")
       socket.current!.emit("add-user", roomID);
@@ -211,6 +212,7 @@ export default function PersistentDrawerLeft() {
     if (roomInput) {
       localStorage.setItem("roomID", roomInput);
       setRoomID(roomInput);
+      console.log("room added",roomID)
       // Emit room join/create event to the server
       socket.current!.emit("join-room", roomInput);
     }
