@@ -154,10 +154,10 @@ export default function PersistentDrawerLeft() {
 
   useEffect(() => {
     console.log("user",user)
-    if (user) {
+   
       console.log("user adding ....")
       socket.current!.emit("add-user", roomID);
-    }
+  
   }, [roomID]);
 
   useEffect(() => {
