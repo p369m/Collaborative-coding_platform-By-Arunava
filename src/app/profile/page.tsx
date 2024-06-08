@@ -138,7 +138,7 @@ export default function PersistentDrawerLeft() {
   };
 
   useEffect(() => {
-    socket.current = io("http://localhost:5000");
+    socket.current = io("https://mysocketserver.onrender.com");
     const checkUser = async () => {
       const res = await axios.get("/api/users/me");
 
