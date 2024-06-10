@@ -138,7 +138,7 @@ export default function PersistentDrawerLeft() {
   };
 
   useEffect(() => {
-    socket.current = io("https://mysocketserver-production.up.railway.app");
+    socket.current = io("https://generous-passion-production.up.railway.app");
     const checkUser = async () => {
       const res = await axios.get("/api/users/me");
 
