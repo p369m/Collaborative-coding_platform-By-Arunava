@@ -138,7 +138,7 @@ export default function PersistentDrawerLeft() {
   };
 
   useEffect(() => {
-    socket.current = io("https://striking-reprieve-jn.up.railway.app");
+    socket.current = io("http://13.233.236.85:5000");
     const checkUser = async () => {
       const res = await axios.get("/api/users/me");
 
